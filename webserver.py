@@ -24,9 +24,9 @@ def consultar(nombre: str=Form(...),
 	response = requests.post(url, data = {"sexo":sexo, "edad":edad, "monto":monto, "tipo_vivienda": tipo_vivienda})
 	respuesta = response.json()
 	if respuesta["proba_bad_client"] > 0.5:
-		mensaje = f<h3>"Apreciado {nombre}, no le podemos prestar dinero."
+		mensaje = f"<h3>Apreciado {nombre}, no le podemos prestar dinero.<h3>"
 	else:
-		mensaje = f<h3>"Apreciado {nombre}, su crédito fue aprobado"
+		mensaje = f"<h3>Apreciado {nombre}, su crédito fue aprobado.<h3>"
 	
 	
 	return mensaje
