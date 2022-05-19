@@ -27,7 +27,7 @@ def predict(sexo: str=Form(...),
 	X = pipeline.transform([[sexo, edad, monto, tipo_vivienda]])
 	proba_bad_client = modelo.predict_proba(X)[0][1]
    
-	return {"proba_bad client": proba_bad_client}
+	return {"proba_bad_client": proba_bad_client}
 	
 	
 	
